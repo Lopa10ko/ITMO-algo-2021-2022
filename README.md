@@ -16,13 +16,13 @@ Lab2 (Сортировка слиянием и быстрая сортировк
 * [D - Анти-Quicksort](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems2/2D.py)
 * [E - K-ая порядковая статистика](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems2/2E.py)
  
-* Lab3 (Пирамидальная сортировка и цифровая сортировка):
+Lab3 (Пирамидальная сортировка и цифровая сортировка):
 * [A - Пирамида ли?](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems3/3A.py)
 * [B - Пирамидальная сортировка](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems3/3B.py)
 * [C - Цифровая сортировка](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems3/3C.py)
 * [D - Приоритетная очередь](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems3/3D.py)
 
-* Lab4 (Стек, очередь и бинпоиск):
+Lab4 (Стек, очередь и бинпоиск):
 * [A - Стек](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems4/4A.py)
 * [B - Очередь](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems4/4B.py)
 * [C - Правильная скобочная последовательность](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems4/4C.py)
