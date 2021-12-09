@@ -36,6 +36,12 @@ Lab5 (Binary Search Tree, Quack интерпретатор):
 * [C - Простое BST](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems5/5C.cpp)
 * [D - Интерпретатор языка Quack](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems5/5D.py)
 
+Lab6 (HashSet, HashMap, LinkedMap, MultiMap):
+* [A - HashSet](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems6/6A.cpp)
+* [B - HashMap](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems6/6B.py)
+* [C - LinkedMap](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+* [D - MultiMap](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
 ## Facts:
 > Bad programmers worry about the code. Good programmers worry about data structures and their relationships. (c) Linus Torvalds
 
