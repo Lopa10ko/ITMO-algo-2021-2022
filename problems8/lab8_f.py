@@ -1,4 +1,3 @@
-from platform import mac_ver
 from sys import setrecursionlimit
 import threading
 import queue
@@ -23,9 +22,8 @@ def main():
 
     n, m = map(int, file_input.readline().split())
     # graph = {(elem, j) : [] for j in range(m) for elem in file_input.readline() if elem != "#"}
-    start, finish = [], []
-    mapping = []
-    prepath, distance = [[0] * m] * n, [[None] * m] * n
+    start, finish, mapping, answer = [], [], [], []
+    prepath, value = [[0 for i in range(m)] for _ in range(n)], [[None for i in range(m)] for _ in range(n)]
     for i in range(n):        
         current = file_input.readline()[: m]
         current = current.replace('.', '1').replace('#', '0')
@@ -35,14 +33,56 @@ def main():
         if 'T' in current:
             finish = [i, current.find('T')]
             current = current.replace('T', '1', 1)
-        mapping.append(list(current))
-    
-
-    
-
-        
+        mapping.append(list(map(int, current)))
+    # print(mapping)
+    que = queue.Queue()
+    que.put(start)
+    value[start[0]][start[1]] = 0
+    while not que.empty():
+        # print(finish)
+        i, j = que.get()
+        if i - 1 > -1:
+            if mapping[i - 1][j] and not value[i - 1][j]: 
+                value[i - 1][j] = value[i][j] + 1
+                prepath[i - 1][j] = 'U'
+                que.put([i - 1, j])
+        if j - 1 > -1:
+            if mapping[i][j - 1] and not value[i][j - 1]: 
+                value[i][j - 1] = value[i][j] + 1
+                prepath[i][j - 1] = 'L'
+                que.put([i, j - 1])
+        if i + 1 < n:
+            if mapping[i + 1][j] and not value[i + 1][j]: 
+                value[i + 1][j] = value[i][j] + 1
+                prepath[i + 1][j] = 'D'
+                que.put([i + 1, j])
+        if j + 1 < m:
+            if mapping[i][j + 1] and not value[i][j + 1]: 
+                value[i][j + 1] = value[i][j] + 1
+                prepath[i][j + 1] = 'R'
+                que.put([i, j + 1])
+        if value[finish[0]][finish[1]] is not None: break
+    i, j = finish
+    # print(prepath)
+    if not value[finish[0]][finish[1]]: print(-1, file=file_output)
+    else:
+        print(value[i][j], file=file_output)
     # print(graph)
     # print(*bfs(graph, 0, n), file=file_output)
+        for _ in range(value[i][j]):
+            if prepath[i][j] == 'U':
+                answer.append('U')
+                i += 1
+            elif prepath[i][j] == 'L':
+                answer.append('L')
+                j += 1
+            elif prepath[i][j] == 'D':
+                answer.append('D')
+                i -= 1
+            elif prepath[i][j] == 'R':
+                answer.append('R')
+                j -= 1
+        print(*answer[::-1], sep='', file=file_output)
     file_output.close()
 
 thread = threading.Thread(target=main)
