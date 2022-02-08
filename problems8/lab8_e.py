@@ -23,7 +23,6 @@ def main():
             contig_lst[current[1] - 1].append(current[0] - 1)
         if current[1] - 1 not in contig_lst[current[0] - 1]:
             contig_lst[current[0] - 1].append(current[1] - 1)
-
     dfs(0, 0)
     print(*[components[index][1] for index in range(n)], end=' ', file=file_output)
     file_output.close()
