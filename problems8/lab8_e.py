@@ -1,30 +1,40 @@
 from sys import setrecursionlimit
 import threading
+import queue
 setrecursionlimit(10 ** 9)
 threading.stack_size(67108864)
 
 def main():
     file_input, file_output = open('pathbge1.in', 'r'), open('pathbge1.out','w')
-    #recursive depth-first-searchw with dist minimization
-    def dfs(index, dist):
-        components[index][0] = 1 #colored grey
-        if components[index][1] is None or components[index][1] > dist:
-            components[index][1] = dist
-        for i in range(len(contig_lst[index])):
-            if contig_lst[index][i] and not components[contig_lst[index][i]][0]:
-                dfs(contig_lst[index][i], dist +1)
+    #non-recursive depth-first-searchw with dist minimization
+    def bfs(graph, source, n):
+        visited, distances, que  = [], [0] * n, queue.Queue()
+        que.put(source)
+        while not que.empty(): 
+            temp = que.get()
+            visited.append(temp)
+            for index in graph.get(temp):
+                if distances[index] == 0:
+                    distances[index] = distances[temp] + 1
+                    que.put(index)
+        distances[0] = 0
+        return distances
 
     n, m = map(int, file_input.readline().split())
-    contig_lst, components = [[] for _ in range(n)], [[0, None] for _ in range(n)]
-    #contigious vortexes list creation
+    graph = {}
+    #contigious vortexes list creation in dict
     for _ in range(m):
         current = list(map(int, file_input.readline().split()))
-        if current[0] - 1 not in contig_lst[current[1] - 1]:
-            contig_lst[current[1] - 1].append(current[0] - 1)
-        if current[1] - 1 not in contig_lst[current[0] - 1]:
-            contig_lst[current[0] - 1].append(current[1] - 1)
-    dfs(0, 0)
-    print(*[components[index][1] for index in range(n)], end=' ', file=file_output)
+        if graph.get(current[0] - 1) is not None and current[1] - 1 not in graph.get(current[0] - 1):
+            graph.update({current[0] - 1 : graph.get(current[0] - 1) + [current[1] - 1]})
+        elif graph.get(current[0] - 1) is None:
+            graph.update({current[0] - 1 : [current[1] - 1]})
+        if graph.get(current[1] - 1) is not None and current[0] - 1 not in graph.get(current[1] - 1):
+            graph.update({current[1] - 1 : graph.get(current[1] - 1) + [current[0] - 1]})
+        elif graph.get(current[1] - 1) is None:
+            graph.update({current[1] - 1 : [current[0] - 1]})
+    # print(graph)
+    print(*bfs(graph, 0, n), file=file_output)
     file_output.close()
 
 thread = threading.Thread(target=main)
