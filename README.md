@@ -48,6 +48,12 @@ Lab7 (AVL: insertion, deletion, rotation, balancing):
 * [C - Удаление из AVL](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 * [D - Добавление в AVL](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
+Lab8 (Graphs):
+* [A - Балансировка AVL-дерева](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems7/avl_balance.py)
+* [B - Поворот AVL-дерева](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+* [C - Удаление из AVL](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+* [D - Добавление в AVL](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
 ## Facts:
 > Bad programmers worry about the code. Good programmers worry about data structures and their relationships. (c) Linus Torvalds
 
