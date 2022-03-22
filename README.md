@@ -48,6 +48,22 @@ Lab7 (AVL: insertion, deletion, rotation, balancing):
 * [C - Удаление из AVL](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 * [D - Добавление в AVL](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
+Lab8 (Graphs: basics):
+* [A - От списка ребер к матрице смежности, орграф](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems8/lab8_a.py)
+* [B - Проверка на неориентированность](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems8/lab8_b.py)
+* [C - Проверка на наличие параллельных ребер в неорграфе](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems8/lab8_c.py)
+* [D - Компоненты связности](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems8/lab8_d.py)
+* [E - Кратчайший путь в невзвешенном графе](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems8/lab8_e.py)
+* [F - Лабиринт](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems8/lab8_f.py)
+
+Lab9 (Graphs: topsort, hamiltonian, bipartite, cycle):
+* [A - Топологическая сортировка](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems9/lab9_a.py)
+* [B - Поиск цикла](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems9/lab9_b.py)
+* [C - Двудольный граф](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems9/lab9_c.py)
+* [D - Конденсация графа](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems9/lab9_d.py)
+* [E - Гамильтонов путь](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems9/lab9_e.py)
+* [F - Игра](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems9/lab9_f.py)
+
 ## Facts:
 > Bad programmers worry about the code. Good programmers worry about data structures and their relationships. (c) Linus Torvalds
 
