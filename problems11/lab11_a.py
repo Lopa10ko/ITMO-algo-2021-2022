@@ -23,8 +23,7 @@ def main():
                     current_vertex_weight = weight_map[i]
         if current_vertex_weight == float("inf"): break
         for i in range(N):
-            temp = weight_map[current_vertex] + matrix[current_vertex][i]
-            weight_map[i] = temp if (temp < weight_map[i]) else weight_map[i]
+            weight_map[i] = min(weight_map[i], weight_map[current_vertex] + matrix[current_vertex][i])
         marked[current_vertex] = 1
     #if finish -> inf, path does not exist
     print(-1 if weight_map[finish_vertex - 1] == float("inf") else int(weight_map[finish_vertex - 1]), file=file_output)
