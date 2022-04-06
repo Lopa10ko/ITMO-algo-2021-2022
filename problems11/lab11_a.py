@@ -1,33 +1,38 @@
 from sys import setrecursionlimit
-import array
 import threading
+from heapq import heappop, heappush
 setrecursionlimit(10 ** 9)
 threading.stack_size(3 * 67108864)
- 
+  
 def main():
     #Dijkstra algo
+    def dijkstra(graph, start_vertex, finish_vertex):
+        my_heap = []
+        weight_map = {w: float("inf") for w in graph.keys()}
+        weight_map[start_vertex] = 0
+        heappush(my_heap, (0, start_vertex))
+        while my_heap:
+            weight, vertex = heappop(my_heap)
+            for vertex1, cur_weight in graph[vertex]:
+                temp_weight = weight + cur_weight
+                if temp_weight < weight_map[vertex1]:
+                    weight_map[vertex1] = temp_weight
+                    heappush(my_heap, (temp_weight, vertex1))
+        return weight_map[finish_vertex] if weight_map[finish_vertex] != float("inf") else -1
+
     file_input, file_output = open('pathmgep.in', 'r'), open('pathmgep.out','w')
-    N, start_vertex, finish_vertex = map(int, file_input.readline().split())
-    matrix = [list(map(float, file_input.readline().replace("-1", "inf").split())) for _ in range(N)]
-    weight_map, marked = [float("inf")] * N, array.array('b', [0] * N)
-    weight_map[start_vertex - 1] = 0 # (a,a)
-    #full matrix O(n^2) iteration
-    for _ in range(N):
-        current_vertex_weight = float("inf")
-        current_vertex = None
-        #find min_weight vertex
-        for i in range(N):
-            if not marked[i]:
-                if weight_map[i] < current_vertex_weight:
-                    current_vertex = i
-                    current_vertex_weight = weight_map[i]
-        if current_vertex_weight == float("inf"): break
-        for i in range(N):
-            weight_map[i] = min(weight_map[i], weight_map[current_vertex] + matrix[current_vertex][i])
-        marked[current_vertex] = 1
-    #if finish -> inf, path does not exist
-    print(-1 if weight_map[finish_vertex - 1] == float("inf") else int(weight_map[finish_vertex - 1]), file=file_output)
+    N, S, F = map(int, file_input.readline().split())
+    matrix = {}
+    for i in range(N):
+        current = list(map(int, file_input.readline().split()))
+        concurrent = []
+        for j in range(N):
+            if i != j and current[j] != -1:
+                concurrent.append((j, current[j]))
+        matrix[i] = concurrent
+        del concurrent
+    print(dijkstra(matrix, S - 1, F - 1), file=file_output)
     file_output.close()
- 
+
 thread = threading.Thread(target=main)
 thread.start()
