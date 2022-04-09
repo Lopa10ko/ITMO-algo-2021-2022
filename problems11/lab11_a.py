@@ -3,7 +3,7 @@ import threading
 from heapq import heappop, heappush
 setrecursionlimit(10 ** 9)
 threading.stack_size(3 * 67108864)
-  
+
 def main():
     #Dijkstra algo
     def dijkstra(graph, start_vertex, finish_vertex):
@@ -20,7 +20,7 @@ def main():
                     heappush(my_heap, (temp_weight, vertex1))
         return weight_map[finish_vertex] if weight_map[finish_vertex] != float("inf") else -1
 
-    file_input, file_output = open('pathmgep.in', 'r'), open('pathmgep.out','w')
+    file_input, file_output = open('pathmgep.in', 'r'), open('pathmgep.out', 'w')
     N, S, F = map(int, file_input.readline().split())
     matrix = {}
     for i in range(N):
