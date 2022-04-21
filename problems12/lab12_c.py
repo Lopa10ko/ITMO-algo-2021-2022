@@ -3,7 +3,7 @@ import threading
 setrecursionlimit(10 ** 9)
 threading.stack_size(3 * 67108864)
 
-def main():
+def main(): #Levenstein readaction diff
     first, second = input().strip(), input().strip()
     matrix = [["" for _ in range(len(second))] for i in range(len(first))]
     for i in range(len(first)):
