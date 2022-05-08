@@ -66,9 +66,9 @@ Lab9 (Graphs: topsort, hamiltonian, bipartite, cycle):
 
 Lab10 (Graphs: MST, vertex deg):
 * [A - Степени вершин](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems10/lab10_a.py)
-* [B - Остовное дерево](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems9/lab10_b.py)
-* [C - Остовное дерево 3](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems9/lab10_c_boruvka.py)
-* [D - Остовное дерево 3](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems9/lab10_с.py)
+* [B - Остовное дерево](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems10/lab10_b.py)
+* [C - Остовное дерево 3](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems10/lab10_c_boruvka.py)
+* [D - Остовное дерево 3](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems10/lab10_с.py)
 
 ## Facts:
 > Bad programmers worry about the code. Good programmers worry about data structures and their relationships. (c) Linus Torvalds
