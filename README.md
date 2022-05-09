@@ -75,7 +75,7 @@ Lab11 (Graphs: Dijkstra, paths, negative cycle):
 * [B - Кратчайший путь от каждой вершины до каждой](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems11/lab11_b.py)
 * [C - Кратчайший путь](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems11/lab11_c.py)
 * [D - Кратчайшие пути и прочее](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems11/lab11_d.py)
-* [E - Цикл отрицательного веса](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems11/lab11_e.py)
+* [E - Цикл отрицательного веса](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems11/lab11_e.cpp)
 
 ## Facts:
 > Bad programmers worry about the code. Good programmers worry about data structures and their relationships. (c) Linus Torvalds
