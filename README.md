@@ -70,6 +70,13 @@ Lab10 (Graphs: MST, vertex deg):
 * [C - Остовное дерево 3](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems10/lab10_c_boruvka.py)
 * [D - Остовное дерево 3](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems10/lab10_с.py)
 
+Lab11 (Graphs: Dijkstra, paths, negative cycle):
+* [A - Кратчайший путь](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems11/lab11_a.py)
+* [B - Кратчайший путь от каждой вершины до каждой](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems11/lab11_b.py)
+* [C - Кратчайший путь](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems11/lab11_c.py)
+* [D - Кратчайшие пути и прочее](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems11/lab11_d.py)
+* [E - Цикл отрицательного веса](https://github.com/Lopa10ko/ITMO-algo-2021-2022/blob/main/problems11/lab11_e.py)
+
 ## Facts:
 > Bad programmers worry about the code. Good programmers worry about data structures and their relationships. (c) Linus Torvalds
 
